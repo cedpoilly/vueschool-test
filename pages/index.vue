@@ -7,7 +7,7 @@ useHead({
 <template>
   <TheNavBar />
   <main class="px-[15px]">
-    <HeroSection />
+    <HeroSection class="mb-[104px]" />
     <AboutSection />
     <StatsSection />
     <PriceList />
