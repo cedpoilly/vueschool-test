@@ -6,11 +6,13 @@ useHead({
 
 <template>
   <TheNavBar />
-  <HeroSection />
-  <AboutSection />
-  <StatsSection />
-  <PriceList />
-  <WorkShops />
+  <main class="px-[15px]">
+    <HeroSection />
+    <AboutSection />
+    <StatsSection />
+    <PriceList />
+    <WorkShops />
+  </main>
   <TheFooter />
 </template>
 
