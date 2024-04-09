@@ -8,8 +8,8 @@ useHead({
   <TheNavBar />
   <main class="px-[15px]">
     <HeroSection class="mb-[104px]" />
-    <AboutSection />
-    <StatsSection />
+    <AboutSection class="mb-[120px]" />
+    <StatsSection class="mb-[120px]" />
     <PriceList />
     <WorkShops />
   </main>
