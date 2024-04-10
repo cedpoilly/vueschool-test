@@ -113,7 +113,7 @@ const priceForSeats = computed(() => props.pricePerMonth * seats.value)
       </section>
     </main>
 
-    <footer class="grid">
+    <footer class="grid gap-y-2">
       <NuxtLink :to="primaryCTA.url" class="btn btn-primary"
         >{{ primaryCTA.label }}
       </NuxtLink>
