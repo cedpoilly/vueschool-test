@@ -105,10 +105,8 @@ const priceForSeats = computed(() => props.pricePerMonth * seats.value)
             <span class="leading-[18.96px] text-[#979FAD]">seats</span>
           </div>
 
-          <div class="text-primary flex items-center">
-            <span class="leading-[18.96px] font-bold">
-              {{ props.discount }}%
-            </span>
+          <div class="text-primary flex items-center font-medium">
+            <span class="leading-[18.96px]"> {{ props.discount }}% </span>
             <span class="leading-[18.96px]">&nbsp;discount</span>
           </div>
         </div>
