@@ -5,15 +5,17 @@ useHead({
 </script>
 
 <template>
-  <TheNavBar />
-  <main class="px-[15px] mb-[100px]">
-    <HeroSection class="mb-[104px]" />
-    <AboutSection class="mb-[120px]" />
-    <StatsSection class="mb-[120px]" />
-    <PriceList class="mb-[120px]" />
-    <WorkShops />
-  </main>
-  <TheFooter />
+  <div class="container">
+    <TheNavBar />
+    <main class="px-[15px] mb-[100px]">
+      <HeroSection class="mb-[104px]" />
+      <AboutSection class="mb-[120px]" />
+      <StatsSection class="mb-[120px]" />
+      <PriceList class="mb-[120px]" />
+      <WorkShops />
+    </main>
+    <TheFooter />
+  </div>
 </template>
 
 <style>
