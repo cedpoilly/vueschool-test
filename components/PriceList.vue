@@ -89,7 +89,7 @@ const priceList = ref([
   {
     id: 3,
     titleText: "Basic",
-    titleIconURL: "/images/basic.svg",
+    titleIconURL: "/images/basic-icon__bolt.svg",
     pricePerMonth: 99,
     featuresLabel: "Includes 1 year access to:",
     features: [
@@ -111,12 +111,14 @@ const priceList = ref([
       {
         label: "Live Weekly QnA",
         tooltip: "Something something",
-        enabled: false,
+        enabled: true,
+        highlighted: true,
       },
       {
-        label: "1x ws ticket per license",
+        label: "4x ws ticket per license",
         tooltip: "Something something",
-        enabled: false,
+        enabled: true,
+        highlighted: true,
       },
     ],
     discount: 26,

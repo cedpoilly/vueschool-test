@@ -46,11 +46,19 @@ const priceForSeats = computed(() => props.pricePerMonth * seats.value)
           <li
             v-for="feature in props.features"
             :key="feature.label"
-            class="flex gap-4"
+            :class="{
+              'opacity-20': !feature.enabled,
+            }"
+            class="flex gap-4 text-sm text-[#F3F5FF]"
           >
-            <img src="/images/feature-enabled-icon.svg" />
-            <span>{{ feature.label }}</span>
-            <!-- <span>{{ feature.enabled }}</span> -->
+            <img
+              v-if="feature.enabled"
+              src="/images/feature-enabled-icon.svg"
+            />
+            <img v-else src="/images/feature-disabled-icon.svg" />
+            <span :class="{ 'font-bold': feature.highlighted }">
+              {{ feature.label }}
+            </span>
           </li>
         </ul>
       </section>
