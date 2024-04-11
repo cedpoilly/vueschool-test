@@ -29,7 +29,7 @@ const stats = ref([
 
 <template>
   <section
-    class="text-center grid gap-y-8 md:max-w-[570px] md:mx-auto lg:max-w-screen-xl lg:grid-cols-2 lg:justify-center lg:items-center lg:gap-x-10 lg:w-auto lg:text-left"
+    class="text-center grid gap-y-8 w-[345px] mx-auto md:mx-auto md:w-full md:max-w-[570px] lg:max-w-screen-xl lg:grid-cols-2 lg:justify-center lg:items-center lg:gap-x-10 lg:w-auto lg:text-left"
   >
     <header class="lg:grid lg:max-w-fit lg:justify-end">
       <h3

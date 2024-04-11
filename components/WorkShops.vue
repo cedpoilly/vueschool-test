@@ -89,11 +89,11 @@ const workshops = ref([
 </script>
 
 <template>
-  <section class="lg:relative lg:mb-[570px]">
+  <section class="w-[345px] md:w-full lg:relative lg:mb-[570px]">
     <article
-      class="lg:absolute grid lg:grid-cols-2 lg:grid-rows-[auto_auto] lg:justify-between lg:max-w-screen-xl"
+      class="grid lg:absolute grid-cols-1 lg:grid-cols-2 lg:grid-rows-[auto_auto] lg:justify-between lg:max-w-screen-xl"
     >
-      <header class="header text-center col-span-1">
+      <header class="header text-center lg:col-span-1">
         <h2
           class="font-bold text-[40px] text-white text-center leading-[47.4px] mb-14 md:text-6xl md:leading-[71.1px] md:mb-[72px] lg:text-left"
         >
@@ -102,7 +102,7 @@ const workshops = ref([
       </header>
 
       <main
-        class="main mb-10 md:mb-12 lg:flex lg:flex-col lg:w-fit lg:max-w-screen lg:col-span-1"
+        class="main mb-10 row-span-2 md:mb-12 lg:flex lg:flex-col lg:w-fit lg:max-w-screen lg:col-span-1"
       >
         <div
           class="carousel carousel-center max-w-[calc(100vw-2rem)] space-x-4 rounded-box md:space-x-[30px] lg:w-screen lg:max-w-[calc(100vw-10rem)] lg:pr-[570px]"
@@ -127,7 +127,7 @@ const workshops = ref([
       </main>
 
       <footer
-        class="footer grid justify-center lg:col-span-2 lg:row-span-2 lg:justify-end"
+        class="footer grid justify-center col-span-1 row-span-3 lg:col-span-2 lg:row-span-2 lg:justify-end"
       >
         <button
           class="btn btn-primary text-[#212435] py-5 px-10 h-14 md:text-base md:h-16"
@@ -149,7 +149,9 @@ const workshops = ref([
 }
 
 .footer {
-  grid-column: 2;
-  grid-row: 1;
+  @media screen and (min-width: 1024px) {
+    grid-column: 2;
+    grid-row: 1;
+  }
 }
 </style>

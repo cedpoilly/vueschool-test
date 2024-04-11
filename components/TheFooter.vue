@@ -400,19 +400,29 @@ const pricing = ref([
   grid-auto-rows: min-content;
 }
 .lg\:col-1 {
-  grid-column: 1;
+  @media screen and (min-width: 1024px) {
+    grid-column: 1;
+  }
 }
 .lg\:col-2 {
-  grid-column: 2;
+  @media screen and (min-width: 1024px) {
+    grid-column: 2;
+  }
 }
 
 .lg\:row-1 {
-  grid-row: 1;
+  @media screen and (min-width: 1024px) {
+    grid-row: 1;
+  }
 }
 .lg\:row-2 {
-  grid-row: 2;
+  @media screen and (min-width: 1024px) {
+    grid-row: 2;
+  }
 }
 .lg\:row-3 {
-  grid-row: 3;
+  @media screen and (min-width: 1024px) {
+    grid-row: 3;
+  }
 }
 </style>

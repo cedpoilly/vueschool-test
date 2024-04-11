@@ -130,7 +130,7 @@ const priceList = ref([
 </script>
 
 <template>
-  <section>
+  <section class="w-[345px] mx-auto md:w-full">
     <header class="text-center mb-14">
       <h2
         class="text-[40px] leading-[47.4px] font-bold md:text-6xl md:leading-[71.1px] md:mb-[72px] lg:max-w-[752px] lg:mx-auto lg:mb-[120px]"
