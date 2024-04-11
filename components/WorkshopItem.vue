@@ -31,7 +31,7 @@ const props = defineProps<Props>()
 
 <template>
   <article
-    class="w-[calc(100vw-2rem)] bg-[#2B2F44E5]/90 rounded-[30px] overflow-hidden"
+    class="w-[calc(100vw-2rem)] bg-[#2B2F44]/90 rounded-[30px] overflow-hidden md:w-[570px]"
   >
     <header class="header-gradient grid grid-flow-col font-medium py-6 px-4">
       <img :src="props.workshop.header.iconURL" alt="Workshop Header" />
