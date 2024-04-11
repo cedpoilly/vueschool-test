@@ -2,17 +2,17 @@
 
 <template>
   <section
-    class="custom-border grid justify-center text-center md:text-left gap-y-6 rounded-t-[30px] md:grid-cols-[152px_1fr] md:px-6 md:py-10 md:gap-x-6"
+    class="custom-border grid justify-center text-center bg-[#2B2F44E5] gap-y-6 rounded-[30px] md:text-left md:grid-cols-[152px_1fr] md:px-6 md:py-10 md:gap-x-6 lg:p-[40px] lg:mx-auto lg:w-auto lg:gap-x-[106px] lg:pl-[80px]"
   >
-    <div class="grid justify-center md-w-[152px]">
+    <div class="grid justify-center md-w-[152px] lg:place-content-center">
       <img
         src="/assets/images/vueschool-logo-only.svg"
         alt="Vue School icon"
-        class="w-[112px] h-auto"
+        class="w-[112px] h-auto lg:w-[135px]"
       />
     </div>
 
-    <div class="grid gap-y-4 px-6 md:px-0">
+    <div class="grid gap-y-4 px-6 md:px-0 lg:max-w-[770px] lg:my-[14px]">
       <h2
         class="font-bold text-2xl md:text-[40px] md:leading-[47.4px] leading-[28.44px] text-[#FFFFFF]"
       >
