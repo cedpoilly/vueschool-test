@@ -12,7 +12,7 @@ useHead({
         <HeroSection class="mb-[104px]" />
         <AboutSection class="mb-[120px] md:mb-[140px] lg:mb-[304px]" />
         <StatsSection class="mb-[120px] md:mb-[140px] lg:mb-[200px]" />
-        <PriceList class="mb-[120px]" />
+        <PriceList class="mb-[120px] lg:mb-[160px]" />
         <WorkShops class="mb-[100px] md:mb-[140px]" />
       </main>
       <TheFooter />

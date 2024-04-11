@@ -133,7 +133,7 @@ const priceList = ref([
   <section>
     <header class="text-center mb-14">
       <h2
-        class="text-[40px] leading-[47.4px] font-bold md:text-6xl md:leading-[71.1px] md:mb-[72px]"
+        class="text-[40px] leading-[47.4px] font-bold md:text-6xl md:leading-[71.1px] md:mb-[72px] lg:max-w-[752px] lg:mx-auto lg:mb-[120px]"
       >
         {{ title.preEm }}
         <em class="not-italic title-gradient">{{ title.em }}</em>
@@ -142,8 +142,14 @@ const priceList = ref([
     </header>
 
     <main>
-      <ul class="grid gap-y-6 justify-center">
-        <li v-for="priceItem in priceList" :key="priceItem.id">
+      <ul
+        class="grid gap-y-6 justify-center lg:grid-cols-3 lg:w-fit lg:mx-auto lg:gap-x-[30px]"
+      >
+        <li
+          v-for="priceItem in priceList"
+          :key="priceItem.id"
+          class="lg:w-[370px]"
+        >
           <PriceListCard v-bind="priceItem" />
         </li>
       </ul>
