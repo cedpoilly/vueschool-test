@@ -147,14 +147,19 @@ const pricing = ref([
 </script>
 
 <template>
-  <footer class="grid px-4 mb-[131px] gap-y-12 md:gap-y-16 md:px-10">
-    <section class="grid gap-y-9 justify-center text-center md:gap-y-10">
+  <footer
+    class="grid px-4 mb-[131px] gap-y-12 md:gap-y-16 md:px-10 lg:grid-cols-2 lg:justify-center lg:w-fit lg:gap-x-[130px] lg:mx-auto"
+  >
+    <section
+      class="grid gap-y-9 justify-center text-center md:gap-y-10 lg:justify-start lg:text-left lg:h-min lg:gap-y-0"
+    >
       <img
-        class="block mx-auto"
+        class="block mx-auto lg:mx-0 lg:mb-[85px]"
         src="@/assets/images/vueschool-footer-logo.svg"
         alt="Vue School logo"
       />
-      <p class="text-white">
+
+      <p class="text-white lg:mb-[61px] lg:w-[470px]">
         Thanks to fine people like you, Vue School can proudly sponsor Evan and
         the future of Vue.js by being a Platinum Patreon
       </p>
@@ -163,7 +168,10 @@ const pricing = ref([
         <h2 class="text-[#737B98] font-medium text-[22px]">
           FOLLOW US IN SOCIAL MEDIA
         </h2>
-        <ul class="flex justify-between md:justify-center md:gap-[42px]">
+
+        <ul
+          class="flex justify-between md:justify-center md:gap-[42px] lg:w-fit"
+        >
           <li v-for="media in socialMediaItems" :key="media.id">
             <NuxtLink :to="media.url">
               <img :src="media.icon" :alt="media.alt" class="h-[60px] block" />
@@ -174,9 +182,9 @@ const pricing = ref([
     </section>
 
     <section
-      class="grid gap-y-8 justify-center text-center md:grid-cols-3 md:text-start md:items-start md:mx-auto md:gap-x-[22px]"
+      class="custom-grid grid gap-y-8 justify-center text-center md:grid-cols-3 md:text-start md:items-start md:mx-auto md:gap-x-[22px] lg:grid-cols-2 lg:gap-x-28"
     >
-      <div class="grid gap-y-5">
+      <div class="grid gap-y-5 lg:hidden lg:row-1">
         <h3 class="text-[#737B98] text-[22px] leading-[30px] font-medium">
           PRODUCTS
         </h3>
@@ -193,7 +201,7 @@ const pricing = ref([
         </ul>
       </div>
 
-      <div class="grid gap-y-5">
+      <div class="grid gap-y-5 lg:hidden lg:row-2 lg:col-2">
         <h3 class="text-[#737B98] text-[22px] leading-[30px] font-medium">
           CORPORATE
         </h3>
@@ -210,7 +218,7 @@ const pricing = ref([
         </ul>
       </div>
 
-      <div class="grid gap-y-5">
+      <div class="grid gap-y-5 lg:hidden lg:row-3 lg:col-1">
         <h3 class="text-[#737B98] text-[22px] leading-[30px] font-medium">
           CONNECT WITH US
         </h3>
@@ -227,7 +235,7 @@ const pricing = ref([
         </ul>
       </div>
 
-      <div class="grid gap-y-5">
+      <div class="grid gap-y-5 lg:hidden lg:row-1 lg:col-2">
         <h3 class="text-[#737B98] text-[22px] leading-[30px] font-medium">
           EVENTS
         </h3>
@@ -244,7 +252,7 @@ const pricing = ref([
         </ul>
       </div>
 
-      <div class="grid gap-y-5">
+      <div class="grid gap-y-5 lg:hidden lg:row-3 lg:col-2">
         <h3 class="text-[#737B98] text-[22px] leading-[30px] font-medium">
           RESOURCES
         </h3>
@@ -261,7 +269,7 @@ const pricing = ref([
         </ul>
       </div>
 
-      <div class="grid gap-y-5">
+      <div class="grid gap-y-5 lg:hidden lg:row-2 lg:col-1">
         <h3 class="text-[#737B98] text-[22px] leading-[30px] font-medium">
           PRICING
         </h3>
@@ -277,6 +285,134 @@ const pricing = ref([
           </li>
         </ul>
       </div>
+
+      <div class="grid gap-y-[50px]">
+        <div class="hidden lg:grid lg:gap-y-5">
+          <h3 class="text-[#737B98] text-[22px] leading-[30px] font-medium">
+            PRODUCTS
+          </h3>
+
+          <ul class="grid gap-y-[14px]">
+            <li v-for="link in products" :key="link.id">
+              <NuxtLink
+                :to="link.url"
+                class="text-white leading-6 hover:underline"
+              >
+                {{ link.label }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hidden lg:grid lg:gap-y-5">
+          <h3 class="text-[#737B98] text-[22px] leading-[30px] font-medium">
+            PRICING
+          </h3>
+
+          <ul class="grid gap-y-[14px]">
+            <li v-for="link in pricing" :key="link.id">
+              <NuxtLink
+                :to="link.url"
+                class="text-white leading-6 hover:underline"
+              >
+                {{ link.label }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hidden lg:grid lg:gap-y-5">
+          <h3 class="text-[#737B98] text-[22px] leading-[30px] font-medium">
+            CONNECT WITH US
+          </h3>
+
+          <ul class="grid gap-y-[14px]">
+            <li v-for="link in connect" :key="link.id">
+              <NuxtLink
+                :to="link.url"
+                class="text-white leading-6 hover:underline"
+              >
+                {{ link.label }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid gap-y-[50px]">
+        <div class="hidden lg:grid lg:gap-y-5">
+          <h3 class="text-[#737B98] text-[22px] leading-[30px] font-medium">
+            EVENTS
+          </h3>
+
+          <ul class="grid gap-y-[14px]">
+            <li v-for="link in events" :key="link.id">
+              <NuxtLink
+                :to="link.url"
+                class="text-white leading-6 hover:underline"
+              >
+                {{ link.label }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hidden lg:grid lg:gap-y-5">
+          <h3 class="text-[#737B98] text-[22px] leading-[30px] font-medium">
+            CORPORATE
+          </h3>
+
+          <ul class="grid gap-y-[14px]">
+            <li v-for="link in corporate" :key="link.id">
+              <NuxtLink
+                :to="link.url"
+                class="text-white leading-6 hover:underline"
+              >
+                {{ link.label }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hidden lg:grid lg:gap-y-5">
+          <h3 class="text-[#737B98] text-[22px] leading-[30px] font-medium">
+            RESOURCES
+          </h3>
+
+          <ul class="grid gap-y-[14px]">
+            <li v-for="link in resources" :key="link.id">
+              <NuxtLink
+                :to="link.url"
+                class="text-white leading-6 hover:underline"
+              >
+                {{ link.label }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
   </footer>
 </template>
+
+<style scoped>
+.custom-grid {
+  grid-auto-rows: min-content;
+}
+.lg\:col-1 {
+  grid-column: 1;
+}
+.lg\:col-2 {
+  grid-column: 2;
+}
+
+.lg\:row-1 {
+  grid-row: 1;
+}
+.lg\:row-2 {
+  grid-row: 2;
+}
+.lg\:row-3 {
+  grid-row: 3;
+}
+</style>
