@@ -91,8 +91,8 @@
 
     <div class="drawer">
       <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content flex flex-col mx-auto">
-        <div class="w-full navbar">
+      <div class="drawer-content flex flex-col mx-auto h-20 md:w-full md:px-12">
+        <div class="w-full navbar h-20 items-center">
           <div class="flex-none lg:hidden">
             <label
               for="my-drawer-3"
@@ -103,7 +103,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                class="inline-block w-6 h-6 stroke-current"
+                class="inline-block w-10 h-10 mt-2.5 stroke-current"
               >
                 <path
                   stroke-linecap="round"
@@ -115,10 +115,19 @@
             </label>
           </div>
 
-          <div class="flex-1 px-2 mx-2">
+          <div class="flex-1 px-2 mx-2 h-16">
             <a class="btn btn-ghost text-xl">
-              <img src="/images/vueschool-nav-logo.svg" alt="Vue School logo" />
+              <img
+                src="/images/vueschool-nav-logo.svg"
+                alt="Vue School logo"
+                class="mb-1"
+              />
             </a>
+          </div>
+
+          <div class="hidden md:flex">
+            <button class="btn btn-ghost text-white">Log in</button>
+            <button class="btn btn-outline text-primary">Sign up</button>
           </div>
 
           <div class="flex-none hidden lg:block">
