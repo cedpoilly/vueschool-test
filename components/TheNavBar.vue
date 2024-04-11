@@ -91,8 +91,8 @@
 
     <div class="drawer">
       <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content flex flex-col mx-auto h-20 md:w-full md:px-12">
-        <div class="w-full navbar h-20 items-center">
+      <div class="drawer-content flex flex-col mx-auto h-24 md:w-full md:px-12">
+        <div class="navbar p-0 w-full h-20 items-center">
           <div class="flex-none lg:hidden">
             <label
               for="my-drawer-3"

@@ -7,7 +7,8 @@ useHead({
 <template>
   <div class="grid justify-center overflow-x-hidden">
     <div class="container mx-auto">
-      <TheNavBar class="md:mb-12" />
+      <TheNavBar class="mb-8 md:mb-12" />
+
       <main class="px-[15px] mb-[100px] md:px-10 lg:grid lg:justify-center">
         <HeroSection class="mb-[104px]" />
         <AboutSection class="mb-[120px] md:mb-[140px] lg:mb-[304px]" />
@@ -22,7 +23,7 @@ useHead({
       ></div>
 
       <div
-        class="absolute overflow-hidden bg-cover w-full h-full bg-no-repeat inset-0 opacity-30 mt-[813px] md:mt-[1153px] lg:mt-[665px] -z-50"
+        class="absolute overflow-hidden bg-cover w-full h-full bg-no-repeat inset-0 opacity-30 mt-[781px] md:mt-[1153px] lg:mt-[665px] -z-50"
         style="background-image: url(http://localhost:3000/images/bg-1.svg)"
       ></div>
 
