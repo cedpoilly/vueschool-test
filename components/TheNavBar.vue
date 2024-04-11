@@ -125,7 +125,7 @@
             </a>
           </div>
 
-          <div class="hidden md:flex">
+          <div class="hidden md:flex lg:hidden">
             <button class="btn btn-ghost text-white">Log in</button>
             <button class="btn btn-outline text-primary">Sign up</button>
           </div>
