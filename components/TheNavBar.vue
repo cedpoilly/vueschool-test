@@ -130,9 +130,9 @@
             <button class="btn btn-outline text-primary">Sign up</button>
           </div>
 
-          <div class="flex-none hidden lg:block">
+          <div class="flex-none hidden lg:flex items-center">
             <ul class="menu menu-horizontal">
-              <li>
+              <li class="grid items-center">
                 <ul class="menu menu-horizontal px-1">
                   <li>
                     <details>
@@ -186,6 +186,7 @@
           </div>
         </div>
       </div>
+
       <div class="drawer-side">
         <label
           for="my-drawer-3"
