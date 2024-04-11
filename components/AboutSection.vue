@@ -35,12 +35,5 @@
 .custom-border {
   border: 1px solid rgba(255, 255, 255, 0.122);
   border-bottom: none;
-  /* Currently struggling with that part, so I will come back to it later. */
-
-  /* border-image-source: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(255, 255, 255, 0) 100%
-  ); */
 }
 </style>

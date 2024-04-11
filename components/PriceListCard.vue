@@ -30,7 +30,7 @@ const priceForSeats = computed(() => props.pricePerMonth * seats.value)
 
 <template>
   <article
-    class="border border-gray-400/40 rounded-[30px] bg-[#2B2F44E5]/90 px-6 py-10 md:w-[640px] md:p-10 lg:w-[370px]"
+    class="custom-border rounded-[30px] bg-[#2B2F44E5]/90 px-6 py-10 md:w-[640px] md:p-10 lg:w-[370px]"
   >
     <header
       class="flex gap-4 items-center text-[22px] font-bold leading-[30px] mb-8"
@@ -63,7 +63,7 @@ const priceForSeats = computed(() => props.pricePerMonth * seats.value)
         </ul>
       </section>
 
-      <section class="bg-[#212435] rounded-2xl py-6 px-[16px]">
+      <section class="bg-[#212435] custom-border rounded-2xl py-6 px-[16px]">
         <h4 class="flex items-center mb-6">
           <em class="font-bold text-[40px] text-white leading-[50.6px]">
             ${{ priceForSeats }}
@@ -131,3 +131,10 @@ const priceForSeats = computed(() => props.pricePerMonth * seats.value)
     </footer>
   </article>
 </template>
+
+<style scoped>
+.custom-border {
+  border: 1px solid rgba(255, 255, 255, 0.122);
+  border-bottom: none;
+}
+</style>
