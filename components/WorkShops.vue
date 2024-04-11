@@ -92,14 +92,16 @@ const workshops = ref([
   <section>
     <article>
       <header class="text-center">
-        <h2 class="font-bold text-[40px] text-white leading-[47.4px] mb-14">
+        <h2
+          class="font-bold text-[40px] text-white text-center leading-[47.4px] mb-14 md:text-6xl md:leading-[71.1px] md:mb-[72px]"
+        >
           Available Workshops
         </h2>
       </header>
 
-      <main class="mb-10">
+      <main class="mb-10 md:mb-12">
         <div
-          class="carousel carousel-center max-w-[calc(100vw-2rem)] space-x-4 rounded-box"
+          class="carousel carousel-center max-w-[calc(100vw-2rem)] space-x-4 rounded-box md:space-x-[30px]"
         >
           <div
             v-for="workshopItem in workshops"
@@ -119,7 +121,9 @@ const workshops = ref([
       </main>
 
       <footer class="grid justify-center">
-        <button class="btn btn-primary text-[#212435] py-5 px-10 h-14">
+        <button
+          class="btn btn-primary text-[#212435] py-5 px-10 h-14 md:text-base md:h-16"
+        >
           See all the workshops
         </button>
       </footer>
