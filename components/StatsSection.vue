@@ -28,12 +28,16 @@ const stats = ref([
 </script>
 
 <template>
-  <section class="text-center grid gap-y-8">
+  <section class="text-center grid gap-y-8 md:max-w-[570px] md:mx-auto">
     <header>
-      <h3 class="text-gradient font-medium mb-3">
+      <h3
+        class="text-gradient font-medium mb-3 md:text-2xl md:leading-[28.44px]"
+      >
         YOUR #1 SOURCE OF VUE.JS COURSES
       </h3>
-      <h2 class="text-[40px] leading-[47.4px] md:text-6xl font-bold">
+      <h2
+        class="text-[40px] leading-[47.4px] font-bold md:text-6xl md:leading-[71.1px]"
+      >
         {{ title.preEm }}
         <em class="not-italic title-gradient">{{ title.em }}</em>
         {{ title.postEm }}
@@ -41,14 +45,16 @@ const stats = ref([
     </header>
 
     <main>
-      <ul class="grid grid-flow-col justify-between">
+      <ul
+        class="grid grid-flow-col justify-between md:justify-center md:gap-x-[61px]"
+      >
         <li
           v-for="datapoint in stats"
           :key="datapoint.id"
           class="grid justify-center"
         >
           <h4
-            class="text-gradient stat-val-color font-medium text-[64px] leading-[75.84px] mb-3"
+            class="text-gradient stat-val-color font-medium text-[64px] leading-[75.84px] mb-3 md:text-[90px]"
           >
             {{ datapoint.value }}
           </h4>
