@@ -15,7 +15,7 @@ const buttonLabel = "Talk to sales"
     class="grid gap-y-12 justify-center lg:grid-cols-[auto_auto] lg:items-center lg:justify-center lg:gap-x-[52px]"
   >
     <div
-      class="text-center grid gap-y-6 justify-center md:max-w-xl lg:max-w-xl lg:gap-y-10 lg:text-left lg:justify-center"
+      class="text-center grid gap-y-6 justify-center mx-auto md:max-w-xl lg:max-w-xl lg:gap-y-10 lg:text-left lg:justify-center"
     >
       <h1 class="text-[40px] leading-[47.4px] md:text-6xl font-bold">
         {{ title.preEm }} <em class="em">{{ title.em }}</em> {{ title.postEm }}
@@ -24,7 +24,7 @@ const buttonLabel = "Talk to sales"
         {{ description }}
       </p>
       <button
-        class="btn btn-primary w-fit mx-auto px-10 py-5 h-fit md:text-base lg:mx-0"
+        class="btn btn-primary w-fit mx-auto px-10 py-5 h-auto leading-none text-base lg:mx-0"
       >
         {{ buttonLabel }}
       </button>

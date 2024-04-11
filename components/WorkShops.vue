@@ -130,7 +130,7 @@ const workshops = ref([
         class="footer grid justify-center col-span-1 row-span-3 lg:col-span-2 lg:row-span-2 lg:justify-end"
       >
         <button
-          class="btn btn-primary text-[#212435] py-5 px-10 h-14 md:text-base md:h-16"
+          class="btn btn-primary text-[#212435] py-5 px-10 h-auto leading-none text-base"
         >
           See all the workshops
         </button>
