@@ -147,8 +147,8 @@ const pricing = ref([
 </script>
 
 <template>
-  <footer class="grid px-4 mb-[131px] gap-y-12">
-    <section class="grid gap-y-9 justify-center text-center">
+  <footer class="grid px-4 mb-[131px] gap-y-12 md:gap-y-16 md:px-10">
+    <section class="grid gap-y-9 justify-center text-center md:gap-y-10">
       <img
         class="block mx-auto"
         src="@/assets/images/vueschool-footer-logo.svg"
@@ -163,7 +163,7 @@ const pricing = ref([
         <h2 class="text-[#737B98] font-medium text-[22px]">
           FOLLOW US IN SOCIAL MEDIA
         </h2>
-        <ul class="flex justify-between">
+        <ul class="flex justify-between md:justify-center md:gap-[42px]">
           <li v-for="media in socialMediaItems" :key="media.id">
             <NuxtLink :to="media.url">
               <img :src="media.icon" :alt="media.alt" class="h-[60px] block" />
@@ -173,7 +173,9 @@ const pricing = ref([
       </div>
     </section>
 
-    <section class="grid gap-y-8 justify-center text-center">
+    <section
+      class="grid gap-y-8 justify-center text-center md:grid-cols-3 md:text-start md:items-start md:mx-auto md:gap-x-[22px]"
+    >
       <div class="grid gap-y-5">
         <h3 class="text-[#737B98] text-[22px] leading-[30px] font-medium">
           PRODUCTS
