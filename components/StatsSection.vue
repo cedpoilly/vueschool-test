@@ -28,15 +28,17 @@ const stats = ref([
 </script>
 
 <template>
-  <section class="text-center grid gap-y-8 md:max-w-[570px] md:mx-auto">
-    <header>
+  <section
+    class="text-center grid gap-y-8 md:max-w-[570px] md:mx-auto lg:max-w-screen-xl lg:grid-cols-2 lg:justify-center lg:items-center lg:gap-x-10 lg:w-auto lg:text-left"
+  >
+    <header class="lg:grid lg:max-w-fit lg:justify-end">
       <h3
         class="text-gradient font-medium mb-3 md:text-2xl md:leading-[28.44px]"
       >
         YOUR #1 SOURCE OF VUE.JS COURSES
       </h3>
       <h2
-        class="text-[40px] leading-[47.4px] font-bold md:text-6xl md:leading-[71.1px]"
+        class="text-[40px] leading-[47.4px] font-bold md:text-6xl md:leading-[71.1px] lg:w-[570px]"
       >
         {{ title.preEm }}
         <em class="not-italic title-gradient">{{ title.em }}</em>
@@ -44,7 +46,7 @@ const stats = ref([
       </h2>
     </header>
 
-    <main>
+    <main class="lg:w-min">
       <ul
         class="grid grid-flow-col justify-between md:justify-center md:gap-x-[61px]"
       >

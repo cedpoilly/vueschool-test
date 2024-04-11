@@ -11,7 +11,7 @@ useHead({
       <main class="px-[15px] mb-[100px] md:px-10 lg:grid lg:justify-center">
         <HeroSection class="mb-[104px]" />
         <AboutSection class="mb-[120px] md:mb-[140px] lg:mb-[304px]" />
-        <StatsSection class="mb-[120px] md:mb-[140px]" />
+        <StatsSection class="mb-[120px] md:mb-[140px] lg:mb-[200px]" />
         <PriceList class="mb-[120px]" />
         <WorkShops class="mb-[100px] md:mb-[140px]" />
       </main>
