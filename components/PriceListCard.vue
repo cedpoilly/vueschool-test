@@ -30,7 +30,7 @@ const priceForSeats = computed(() => props.pricePerMonth * seats.value)
 
 <template>
   <article
-    class="border border-gray-400/40 rounded-[30px] bg-[#2B2F44E5]/90 px-6 py-10"
+    class="border border-gray-400/40 rounded-[30px] bg-[#2B2F44E5]/90 px-6 py-10 md:w-[640px] md:p-10"
   >
     <header
       class="flex gap-4 items-center text-[22px] font-bold leading-[30px] mb-8"
@@ -64,16 +64,16 @@ const priceForSeats = computed(() => props.pricePerMonth * seats.value)
       </section>
 
       <section class="bg-[#212435] rounded-2xl py-6 px-[16px]">
-        <h4 class="mb-6">
+        <h4 class="flex items-center mb-6">
           <em class="font-bold text-[40px] text-white leading-[50.6px]">
             ${{ priceForSeats }}
           </em>
-          <span class="font-normal leading-[19.36px] text-[#A0A8C3]"
-            >/ seat / month
+          <span class="font-normal leading-[19.36px] text-[#A0A8C3]">
+            &nbsp; / seat / month
           </span>
         </h4>
 
-        <form class="px-0">
+        <form class="px-0 md:mb-4">
           <label
             class="font-bold text-base text-white leading-[18.96px] mb-4 block"
             for="seat-count"
@@ -88,13 +88,16 @@ const priceForSeats = computed(() => props.pricePerMonth * seats.value)
             value="40"
             class="range range-success"
           />
+
           <div class="w-full flex justify-between text-xs px-2">
             <span class="text-[#737B98] text-sm leading-[16.94px]">5</span>
             <span class="text-[#737B98] text-sm leading-[16.94px]">20</span>
           </div>
         </form>
 
-        <div class="grid grid-flow-col justify-between">
+        <div
+          class="grid grid-flow-col justify-between md:justify-start md:gap-x-5"
+        >
           <div
             class="grid grid-flow-col items-center justify-between gap-x-[10px] px-[14px] py-[4px] rounded-lg bg-[#0E0E1033]/20"
           >
@@ -106,7 +109,7 @@ const priceForSeats = computed(() => props.pricePerMonth * seats.value)
           </div>
 
           <div class="text-primary flex items-center font-medium">
-            <span class="leading-[18.96px]"> {{ props.discount }}% </span>
+            <span class="leading-[18.96px]"> {{ props.discount }}%</span>
             <span class="leading-[18.96px]">&nbsp;discount</span>
           </div>
         </div>
