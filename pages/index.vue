@@ -8,7 +8,7 @@ useHead({
   <div class="grid justify-center overflow-x-hidden">
     <div class="container">
       <TheNavBar class="md:mb-12" />
-      <main class="px-[15px] mb-[100px]">
+      <main class="px-[15px] mb-[100px] md:px-10">
         <HeroSection class="mb-[104px]" />
         <AboutSection class="mb-[120px]" />
         <StatsSection class="mb-[120px]" />
