@@ -11,18 +11,24 @@ const buttonLabel = "Talk to sales"
 </script>
 
 <template>
-  <section class="grid gap-y-12">
-    <div class="text-center grid gap-y-6 justify-center">
+  <section class="grid gap-y-12 justify-center">
+    <div class="text-center grid gap-y-6 justify-center md:max-w-xl">
       <h1 class="text-[40px] leading-[47.4px] md:text-6xl font-bold">
         {{ title.preEm }} <em class="em">{{ title.em }}</em> {{ title.postEm }}
       </h1>
-      <p>{{ description }}</p>
-      <button class="btn btn-primary w-fit mx-auto px-10 py-5 h-auto">
+      <p class="md:text-[22px] md:leading-[30px] md:mb-10">{{ description }}</p>
+      <button
+        class="btn btn-primary w-fit mx-auto px-10 py-5 h-auto md:text-base"
+      >
         {{ buttonLabel }}
       </button>
     </div>
 
-    <img src="/assets/images/hero-illustration.svg" />
+    <img
+      src="/assets/images/hero-illustration.svg"
+      alt="Illustration"
+      class="mx-auto"
+    />
   </section>
 </template>
 
