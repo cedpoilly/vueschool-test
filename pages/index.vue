@@ -16,27 +16,27 @@ useHead({
         <WorkShops class="mb-[100px] md:mb-[140px] lg:mb-[200px]" />
       </main>
       <TheFooter />
+      <div
+        class="absolute overflow-hidden bg-cover w-[99.2vw] h-full bg-no-repeat inset-0 opacity-10 mt-[813px] md:mt-[1153px] lg:mt-[696.69px] -z-50"
+        style="background-image: url(http://localhost:3000/images/bg-2.svg)"
+      ></div>
+
+      <div
+        class="absolute overflow-hidden bg-cover w-[99.2vw] h-full bg-no-repeat inset-0 opacity-30 mt-[813px] md:mt-[1153px] lg:mt-[665px] -z-50"
+        style="background-image: url(http://localhost:3000/images/bg-1.svg)"
+      ></div>
+
+      <div
+        class="absolute overflow-hidden bg-cover w-[99.2vw] h-full bg-no-repeat inset-0 opacity-40 mt-[2023px] md:mt-[2554px] lg:mt-[1886px] -z-50"
+        style="background-image: url(http://localhost:3000/images/bg-3.svg)"
+      ></div>
+
+      <div
+        class="absolute overflow-hidden bg-cover w-[99.2vw] h-full bg-no-repeat inset-0 opacity-30 mt-[2383px] md:mt-[2914px] lg:mt-[2245.81px] -z-50"
+        style="background-image: url(http://localhost:3000/images/bg-4.svg)"
+      ></div>
     </div>
   </div>
-  <div
-    class="absolute overflow-hidden bg-cover w-[99.2vw] h-full bg-no-repeat inset-0 opacity-10 mt-[813px] md:mt-[1153px] lg:mt-[696.69px] -z-50"
-    style="background-image: url(http://localhost:3000/images/bg-2.svg)"
-  ></div>
-
-  <div
-    class="absolute overflow-hidden bg-cover w-[99.2vw] h-full bg-no-repeat inset-0 opacity-30 mt-[813px] md:mt-[1153px] lg:mt-[665px] -z-50"
-    style="background-image: url(http://localhost:3000/images/bg-1.svg)"
-  ></div>
-
-  <div
-    class="absolute overflow-hidden bg-cover w-[99.2vw] h-full bg-no-repeat inset-0 opacity-40 mt-[2023px] md:mt-[2554px] lg:mt-[1886px] -z-50"
-    style="background-image: url(http://localhost:3000/images/bg-3.svg)"
-  ></div>
-
-  <div
-    class="absolute overflow-hidden bg-cover w-[99.2vw] h-full bg-no-repeat inset-0 opacity-30 mt-[2383px] md:mt-[2914px] lg:mt-[2245.81px] -z-50"
-    style="background-image: url(http://localhost:3000/images/bg-4.svg)"
-  ></div>
 </template>
 
 <style>
