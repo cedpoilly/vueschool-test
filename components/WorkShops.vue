@@ -89,19 +89,23 @@ const workshops = ref([
 </script>
 
 <template>
-  <section>
-    <article>
-      <header class="text-center">
+  <section class="lg:relative lg:mb-[570px]">
+    <article
+      class="lg:absolute grid lg:grid-cols-2 lg:grid-rows-[auto_auto] lg:justify-between lg:max-w-screen-xl"
+    >
+      <header class="header text-center col-span-1">
         <h2
-          class="font-bold text-[40px] text-white text-center leading-[47.4px] mb-14 md:text-6xl md:leading-[71.1px] md:mb-[72px]"
+          class="font-bold text-[40px] text-white text-center leading-[47.4px] mb-14 md:text-6xl md:leading-[71.1px] md:mb-[72px] lg:text-left"
         >
           Available Workshops
         </h2>
       </header>
 
-      <main class="mb-10 md:mb-12">
+      <main
+        class="main mb-10 md:mb-12 lg:flex lg:flex-col lg:w-fit lg:max-w-screen lg:col-span-1"
+      >
         <div
-          class="carousel carousel-center max-w-[calc(100vw-2rem)] space-x-4 rounded-box md:space-x-[30px]"
+          class="carousel carousel-center max-w-[calc(100vw-2rem)] space-x-4 rounded-box md:space-x-[30px] lg:w-screen lg:max-w-[calc(100vw-10rem)] lg:pr-[570px]"
         >
           <div
             v-for="workshopItem in workshops"
@@ -113,14 +117,18 @@ const workshops = ref([
           </div>
         </div>
 
-        <div class="flex justify-center w-full py-2 gap-2">
+        <div
+          class="flex justify-center w-full max-w-[calc(100vw-2rem)] py-2 gap-2 lg:max-w-7xl"
+        >
           <a href="#item1" class="btn btn-xs">1</a>
           <a href="#item2" class="btn btn-xs">2</a>
           <a href="#item3" class="btn btn-xs">3</a>
         </div>
       </main>
 
-      <footer class="grid justify-center">
+      <footer
+        class="footer grid justify-center lg:col-span-2 lg:row-span-2 lg:justify-end"
+      >
         <button
           class="btn btn-primary text-[#212435] py-5 px-10 h-14 md:text-base md:h-16"
         >
@@ -130,3 +138,18 @@ const workshops = ref([
     </article>
   </section>
 </template>
+
+<style scoped>
+.header {
+  grid-column: 1;
+}
+
+.main {
+  grid-column: 1;
+}
+
+.footer {
+  grid-column: 2;
+  grid-row: 1;
+}
+</style>
