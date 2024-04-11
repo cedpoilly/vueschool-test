@@ -199,7 +199,42 @@
           <li>
             <!-- Change to accordion? -->
             <ul class="menu menu-horizontal grid px-1">
-              <li>
+              <ul class="menu bg-base-200 w-56 rounded-box">
+                <li>
+                  <a>Courses</a>
+                  <ul>
+                    <li><a>Course 1</a></li>
+                    <li><a>Course 2</a></li>
+                  </ul>
+                </li>
+
+                <li><a>Plans</a></li>
+
+                <li>
+                  <a>Business Service</a>
+                  <ul>
+                    <li><a>Service 1</a></li>
+                    <li><a>Service 2</a></li>
+                  </ul>
+                </li>
+
+                <li><a>Learning Paths</a></li>
+
+                <li><a>Hiring</a></li>
+
+                <li><a>Articles</a></li>
+
+                <li>
+                  <a>Events</a>
+                  <ul>
+                    <li><a>Event 1</a></li>
+                    <li><a>Event 2</a></li>
+                  </ul>
+                </li>
+
+                <li><a>Get Certified</a></li>
+              </ul>
+              <!-- <li>
                 <details>
                   <summary>Courses</summary>
                   <ul class="p-2 bg-base-100 rounded-t-none">
@@ -237,7 +272,7 @@
                 </details>
               </li>
 
-              <li><a>Get Certified</a></li>
+              <li><a>Get Certified</a></li> -->
             </ul>
           </li>
           <li>
