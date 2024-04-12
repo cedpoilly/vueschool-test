@@ -9,7 +9,27 @@ export default defineType({
     {
       name: "title",
       title: "Title",
-      type: "string",
+      type: "object",
+      // pre-em
+      // em
+      // post-em
+      fields: [
+        {
+          name: "pre",
+          title: "Pre",
+          type: "string",
+        },
+        {
+          name: "em",
+          title: "Em",
+          type: "string",
+        },
+        {
+          name: "post",
+          title: "Post",
+          type: "string",
+        },
+      ],
     },
     {
       name: "description",
