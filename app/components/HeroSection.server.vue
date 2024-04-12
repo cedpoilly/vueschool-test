@@ -24,7 +24,6 @@ const ctaLabel = ref(data.value![0].ctaLabel)
   <section
     class="grid gap-y-12 justify-center lg:grid-cols-[auto_auto] lg:items-center lg:justify-center lg:gap-x-[52px]"
   >
-    <!-- <pre>{{ data }}</pre> -->
     <div
       class="text-center grid gap-y-6 justify-center mx-auto md:max-w-xl lg:max-w-xl lg:gap-y-10 lg:text-left lg:justify-center"
     >
