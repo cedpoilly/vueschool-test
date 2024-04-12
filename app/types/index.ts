@@ -13,3 +13,8 @@ export type Stats = {
   coursesCount: number
   totalDuration: number
 }
+
+export type PriceCardItem = {
+  title: string
+  features: string[]
+}

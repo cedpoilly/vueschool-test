@@ -27,6 +27,11 @@ export default defineType({
               type: "boolean",
             },
             {
+              name: "highlighted",
+              title: "Highlighted",
+              type: "boolean",
+            },
+            {
               name: "label",
               title: "Label",
               type: "string",

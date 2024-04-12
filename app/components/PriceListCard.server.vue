@@ -7,7 +7,7 @@ type Props = {
   features: {
     label: string
     tooltip?: string
-    enabled: boolean
+    disabled: boolean
     highlighted?: boolean
   }[]
   discount: number
@@ -47,12 +47,12 @@ const priceForSeats = computed(() => props.pricePerMonth * seats.value)
             v-for="feature in props.features"
             :key="feature.label"
             :class="{
-              'opacity-20': !feature.enabled,
+              'opacity-20': feature.disabled,
             }"
             class="flex gap-4 text-sm text-[#F3F5FF]"
           >
             <img
-              v-if="feature.enabled"
+              v-if="!feature.disabled"
               src="/images/feature-enabled-icon.svg"
             />
             <img v-else src="/images/feature-disabled-icon.svg" />
