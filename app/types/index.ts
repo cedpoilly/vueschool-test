@@ -7,3 +7,9 @@ export type Hero = {
   description: string
   ctaLabel: string
 }
+
+export type Stats = {
+  lessonsCount: number
+  coursesCount: number
+  totalDuration: number
+}
