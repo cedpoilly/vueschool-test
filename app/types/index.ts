@@ -15,6 +15,8 @@ export type Stats = {
 }
 
 export type PriceCardItem = {
+  reference: string
+  position: number
   title: string
   features: string[]
 }

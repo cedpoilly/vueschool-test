@@ -7,6 +7,16 @@ export default defineType({
 
   fields: [
     {
+      name: "reference",
+      title: "Reference",
+      type: "string",
+    },
+    {
+      name: "position",
+      title: "Position",
+      type: "number",
+    },
+    {
       name: "title",
       title: "Title",
       type: "string",
