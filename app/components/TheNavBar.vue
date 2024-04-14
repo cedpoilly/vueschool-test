@@ -4,7 +4,7 @@
       <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content flex flex-col mx-auto h-24 md:w-full md:px-12">
         <div class="navbar p-0 w-full h-20 items-center">
-          <div class="flex-none lg:hidden">
+          <div class="flex-none xl:hidden">
             <label
               for="my-drawer-3"
               aria-label="open sidebar"
@@ -36,12 +36,12 @@
             </a>
           </div>
 
-          <div class="hidden md:flex lg:hidden">
+          <div class="hidden md:flex xl:hidden">
             <button class="btn btn-ghost text-white">Log in</button>
             <button class="btn btn-outline text-primary">Sign up</button>
           </div>
 
-          <div class="flex-none hidden lg:flex items-center">
+          <div class="flex-none hidden xl:flex items-center">
             <ul class="menu menu-horizontal">
               <li class="grid items-center">
                 <ul class="menu menu-horizontal px-1">
