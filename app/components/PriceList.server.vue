@@ -107,12 +107,12 @@ const priceList = computed(() => {
 
     <main>
       <ul
-        class="grid gap-y-6 justify-center lg:grid-cols-3 lg:w-fit lg:mx-auto lg:gap-x-[30px]"
+        class="grid gap-y-6 justify-center xl:grid-cols-3 lg:w-fit lg:mx-auto lg:gap-x-[30px]"
       >
         <li
           v-for="priceItem in priceList"
           :key="priceItem.id"
-          class="lg:w-[370px]"
+          class="xl:w-[370px]"
         >
           <PriceListCard v-bind="priceItem" />
         </li>
