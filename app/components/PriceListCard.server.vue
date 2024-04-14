@@ -30,7 +30,7 @@ const priceForSeats = computed(() => props.pricePerMonth * seats.value)
 
 <template>
   <article
-    class="custom-border rounded-[30px] bg-[#2B2F44E5]/90 px-6 py-10 md:w-[640px] md:p-10 lg:w-[370px]"
+    class="custom-border rounded-[30px] bg-[#2B2F44E5]/90 px-6 py-10 md:w-[640px] md:p-10 xl:w-[370px]"
   >
     <header
       class="flex gap-4 items-center text-[22px] font-bold leading-[30px] mb-8"

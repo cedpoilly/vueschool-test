@@ -27,16 +27,16 @@ const title = {
 
 <template>
   <section
-    class="text-center grid gap-y-8 w-[345px] mx-auto md:mx-auto md:w-full md:max-w-[570px] lg:max-w-screen-xl lg:grid-cols-2 lg:justify-center lg:items-center lg:gap-x-10 lg:w-auto lg:text-left"
+    class="text-center grid gap-y-8 w-[345px] mx-auto md:mx-auto md:w-full md:max-w-[570px] lg:max-w-screen-lg lg:grid-cols-2 lg:justify-center lg:items-center lg:gap-x-5 xl:gap-x-10 lg:w-auto lg:text-left"
   >
-    <header class="lg:grid lg:max-w-fit lg:justify-end">
+    <header class="lg:grid lg:max-w-500px xl:max-w-fit lg:justify-end">
       <h3
         class="text-gradient font-medium mb-3 md:text-2xl md:leading-[28.44px]"
       >
         YOUR #1 SOURCE OF VUE.JS COURSES
       </h3>
       <h2
-        class="text-[40px] leading-[47.4px] font-bold md:text-6xl md:leading-[71.1px] lg:w-[570px]"
+        class="text-[40px] leading-[47.4px] font-bold md:text-6xl md:leading-[71.1px] lg:max-w-[570px]"
       >
         {{ title.preEm }}
         <em class="not-italic title-gradient">{{ title.em }}</em>
@@ -46,7 +46,7 @@ const title = {
 
     <main class="lg:w-min">
       <ul
-        class="grid grid-flow-col justify-between md:justify-center md:gap-x-[61px]"
+        class="grid grid-flow-col justify-between md:justify-center md:gap-x-[61px] lg:gap-x-7 xl:gap-x-[61px]"
       >
         <li class="grid justify-center">
           <h4

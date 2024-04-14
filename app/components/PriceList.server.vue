@@ -10,11 +10,11 @@ import type { PriceCardItem } from "~/types"
 
 const query = groq`
   *[_type == "pricing-item"] {
-    reference,
-    position,
-    title,
-    features
-  }
+      reference,
+      position,
+      title,
+      features
+    }
 `
 
 const { data } = await useSanityQuery<PriceCardItem[]>(query)
@@ -24,56 +24,58 @@ if (!data.value?.length) {
 
 const stats = ref(data.value!)
 
+const baseData = [
+  {
+    id: 1,
+    position: 1,
+    reference: "1-basic",
+    titleText: "Basic",
+    titleIconURL: "/images/basic-icon__leaf.svg",
+    pricePerMonth: 10,
+    featuresLabel: "Includes 1 year access to:",
+    features: [],
+    discount: 26,
+    seatCount: 12,
+    primaryCTA: { label: "Start Learning", url: "/buy/pro" },
+    secondaryCTA: { label: "Refer your manager", url: "/learn/pro" },
+  },
+
+  {
+    id: 2,
+    position: 2,
+    titleText: "Professional",
+    reference: "2-professional",
+    titleIconURL: "/images/professional-icon__rocket-launch.svg",
+    pricePerMonth: 199,
+    featuresLabel: "Includes 1 year access to:",
+    features: [],
+    discount: 26,
+    seatCount: 12,
+    primaryCTA: { label: "Start Learning", url: "/buy/basic" },
+    secondaryCTA: { label: "Refer your manager", url: "/learn/basic" },
+  },
+
+  {
+    id: 3,
+    position: 3,
+    reference: "3-basic",
+    titleText: "Basic (the other one)",
+    titleIconURL: "/images/basic-icon__bolt.svg",
+    pricePerMonth: 99,
+    featuresLabel: "Includes 1 year access to:",
+    features: [],
+    discount: 26,
+    seatCount: 12,
+    primaryCTA: { label: "Start Learning", url: "/buy/basic" },
+    secondaryCTA: { label: "Refer your manager", url: "/learn/basic" },
+  },
+]
+
 const priceList = computed(() => {
-  const baseData = [
-    {
-      id: 1,
-      reference: "1-basic",
-      titleText: "Basic",
-      titleIconURL: "/images/basic-icon__leaf.svg",
-      pricePerMonth: 10,
-      featuresLabel: "Includes 1 year access to:",
-      features: [],
-      discount: 26,
-      seatCount: 12,
-      primaryCTA: { label: "Start Learning", url: "/buy/pro" },
-      secondaryCTA: { label: "Refer your manager", url: "/learn/pro" },
-    },
-
-    {
-      id: 2,
-      titleText: "Professional",
-      reference: "2-professional",
-      titleIconURL: "/images/professional-icon__rocket-launch.svg",
-      pricePerMonth: 199,
-      featuresLabel: "Includes 1 year access to:",
-      features: [],
-      discount: 26,
-      seatCount: 12,
-      primaryCTA: { label: "Start Learning", url: "/buy/basic" },
-      secondaryCTA: { label: "Refer your manager", url: "/learn/basic" },
-    },
-
-    {
-      id: 3,
-      reference: "3-basic",
-      titleText: "Basic (the other one)",
-      titleIconURL: "/images/basic-icon__bolt.svg",
-      pricePerMonth: 99,
-      featuresLabel: "Includes 1 year access to:",
-      features: [],
-      discount: 26,
-      seatCount: 12,
-      primaryCTA: { label: "Start Learning", url: "/buy/basic" },
-      secondaryCTA: { label: "Refer your manager", url: "/learn/basic" },
-    },
-  ]
-
   const priceList = baseData
     .map((item) => {
       const statItem = stats.value.find((stat) => {
-        debugger
-        return stat.reference.trim() === item.reference.trim()
+        return stat.position === item.position
       })
 
       const features = statItem?.features || []
@@ -85,9 +87,6 @@ const priceList = computed(() => {
       }
     })
     .sort((a, b) => a.position! - b.position!)
-
-  console.log(priceList)
-  debugger
 
   return priceList
 })
@@ -107,12 +106,12 @@ const priceList = computed(() => {
 
     <main>
       <ul
-        class="grid gap-y-6 justify-center lg:grid-cols-3 lg:w-fit lg:mx-auto lg:gap-x-[30px]"
+        class="grid gap-y-6 justify-center xl:grid-cols-3 lg:w-fit lg:mx-auto lg:gap-x-[30px]"
       >
         <li
           v-for="priceItem in priceList"
           :key="priceItem.id"
-          class="lg:w-[370px]"
+          class="xl:w-[370px]"
         >
           <PriceListCard v-bind="priceItem" />
         </li>
