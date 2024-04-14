@@ -1,30 +1,28 @@
 <script lang="ts" setup>
+import groq from "groq"
+import type { Stats } from "~/types"
+
+const query = groq`
+  *[_type == "stats-section"] {
+    lessonsCount,
+    coursesCount,
+    totalDuration
+  }
+`
+
+const { data } = await useSanityQuery<Stats[]>(query)
+
+if (!data.value?.length) {
+  throw new Error("No Stats data found")
+}
+
+const stats = ref(data.value![0])
+
 const title = {
   preEm: "Full Stack ",
   em: "Vue Training",
   postEm: " Solutions",
 }
-
-const stats = ref([
-  {
-    id: 1,
-    value: 763,
-    label: "Video lessons",
-    icon: "/images/stats-video-icon.svg",
-  },
-  {
-    id: 2,
-    value: 40,
-    label: "Courses",
-    icon: "/images/stats-lesson-icon.svg",
-  },
-  {
-    id: 3,
-    value: 64,
-    label: "Hours",
-    icon: "/images/stats-time-icon.svg",
-  },
-])
 </script>
 
 <template>
@@ -50,20 +48,54 @@ const stats = ref([
       <ul
         class="grid grid-flow-col justify-between md:justify-center md:gap-x-[61px]"
       >
-        <li
-          v-for="datapoint in stats"
-          :key="datapoint.id"
-          class="grid justify-center"
-        >
+        <li class="grid justify-center">
           <h4
             class="text-gradient stat-val-color font-medium text-[64px] leading-[75.84px] mb-3 md:text-[90px]"
           >
-            {{ datapoint.value }}
+            {{ stats.lessonsCount }}
           </h4>
 
           <span class="flex gap-[11px]">
-            <img class="h-5 w-5" :src="datapoint.icon" :alt="datapoint.label" />
-            <p>{{ datapoint.label }}</p>
+            <img
+              class="h-5 w-5"
+              src="/images/stats-video-icon.svg"
+              alt="Video lessons icon"
+            />
+            <p>Video lessons</p>
+          </span>
+        </li>
+
+        <li class="grid justify-center">
+          <h4
+            class="text-gradient stat-val-color font-medium text-[64px] leading-[75.84px] mb-3 md:text-[90px]"
+          >
+            {{ stats.coursesCount }}
+          </h4>
+
+          <span class="flex gap-[11px]">
+            <img
+              class="h-5 w-5"
+              src="/images/stats-lesson-icon.svg"
+              alt="courses icon"
+            />
+            <p>Courses</p>
+          </span>
+        </li>
+
+        <li class="grid justify-center">
+          <h4
+            class="text-gradient stat-val-color font-medium text-[64px] leading-[75.84px] mb-3 md:text-[90px]"
+          >
+            {{ stats.totalDuration }}
+          </h4>
+
+          <span class="flex gap-[11px]">
+            <img
+              class="h-5 w-5"
+              src="/images/stats-time-icon.svg"
+              alt="time icon"
+            />
+            <p>Hours</p>
           </span>
         </li>
       </ul>

@@ -1,13 +1,23 @@
 <script lang="ts" setup>
-const title = {
-  preEm: "Complete ",
-  em: "Vue.js training",
-  postEm: " solutions for companies",
+import groq from "groq"
+import type { Hero } from "~/types"
+
+const query = groq`
+  *[_type == "hero-section"] {
+    title,
+    description,
+    ctaLabel
+  }
+`
+const { data } = await useSanityQuery<Hero[]>(query)
+
+if (!data.value?.length) {
+  throw new Error("No HERO data found")
 }
 
-const description =
-  "Training solutions designed for companies, agencies and organisations with developers using or who are considering using the Vue.js framework"
-const buttonLabel = "Talk to sales"
+const title = ref(data.value![0].title)
+const description = ref(data.value![0].description)
+const ctaLabel = ref(data.value![0].ctaLabel)
 </script>
 
 <template>
@@ -18,7 +28,7 @@ const buttonLabel = "Talk to sales"
       class="text-center grid gap-y-6 justify-center mx-auto md:max-w-xl lg:max-w-xl lg:gap-y-10 lg:text-left lg:justify-center"
     >
       <h1 class="text-[40px] leading-[47.4px] md:text-6xl font-bold">
-        {{ title.preEm }} <em class="em">{{ title.em }}</em> {{ title.postEm }}
+        {{ title.pre }} <em class="em">{{ title.em }}</em> {{ title.post }}
       </h1>
       <p class="md:text-[22px] md:leading-[30px] md:mb-10 lg:mb-0">
         {{ description }}
@@ -26,7 +36,7 @@ const buttonLabel = "Talk to sales"
       <button
         class="btn btn-primary w-fit mx-auto px-10 py-5 h-auto leading-none text-base lg:mx-0"
       >
-        {{ buttonLabel }}
+        {{ ctaLabel }}
       </button>
     </div>
 
